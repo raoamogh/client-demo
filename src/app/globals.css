@@ -1,18 +1,49 @@
 @import "tailwindcss";
 
 @theme {
-  /* We will add our custom colors here later */
+  /* Set the default font family to our Variable Font */
   --font-sans: var(--font-jakarta);
+
+  /* Custom Brand Colors (Extracted from Design) */
+  --color-brand-50: #eff6ff;
+  --color-brand-100: #dbeafe;
+  --color-brand-500: #3b82f6; /* Standard Blue */
+  --color-brand-600: #2563eb; /* Darker Blue for hovers */
+  
+  /* Status Colors */
+  --color-success: #22c55e; /* The Checkmark Green */
+  
+  /* Shadow Styles */
+  --shadow-soft: 0 4px 20px -2px rgba(0, 0, 0, 0.05);
+  --shadow-glow: 0 0 15px rgba(59, 130, 246, 0.5);
 }
 
-/* Reset for the project */
+/* Base Styles */
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #1e293b; /* Slate-800 */
 }
 
 body {
-  background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-sans), sans-serif;
+  /* We don't set background color here because we are using the image */
+}
+
+/* Custom Scrollbar for that 'premium' feel */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.3); /* Slate-400 with opacity */
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(148, 163, 184, 0.5);
 }
