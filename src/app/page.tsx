@@ -1,7 +1,14 @@
+import Sidebar from "@/components/Sidebar";
+import Dashboard from "@/components/Dashboard";
+
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center p-24">
-      <h1 className="text-4xl font-bold text-blue-600">Nanis Demo Setup Complete</h1>
+    <main className="flex w-full h-screen overflow-hidden">
+      {/* 1. The Sidebar (Fixed Width) */}
+      <Sidebar />
+      
+      {/* 2. The Main Content (Fills remaining space) */}
+      <Dashboard />
     </main>
   );
 }
